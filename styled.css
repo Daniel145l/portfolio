@@ -1,0 +1,851 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: #FFF;
+    scroll-behavior: smooth;
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.725);
+    position: fixed;
+    display: none;
+    transition: ease .2s;
+    z-index: 2;
+}
+
+.container-center {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-orange {
+    border: 3px solid #ff7700;
+    background-color: transparent;
+    color: #ff7700;
+}
+
+.btn-orange:hover {
+    border-color: transparent;
+    background-color: #ff7700;
+    color: #FFF;
+}
+
+.btn-black {
+    border: 3px solid transparent;
+    background-color: #000;
+    color: #FFF;
+}
+
+.btn-black:hover {
+    border-color: #000;
+    background-color: transparent;
+    color: #000;
+}
+
+.title-section {
+    display: inline-block;
+    transition: linear .3s;
+    font-size: 1.5em;
+    cursor: default;
+}
+
+.marker-title {
+    border-top: 4px solid #ff7700;
+    border-radius: 2px;
+    margin-bottom: 30px;
+    transition: linear .3s;
+}
+
+/* animation typing */
+
+@keyframes cursor {
+    0% { opacity: 1; }
+    40% { opacity: 1; }
+    60% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* open menu */
+
+
+/* header style */
+
+header {
+    background-color: #000;
+    border-bottom: 2px solid #CECECE;
+    padding: 25px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+header div.logo h1 {
+    font-size: 28px;
+    color: #FFF;
+}
+
+header a {
+    color: #FFF;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: linear .2s;
+}
+
+header nav.menu-desktop ul {
+    display: flex;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+header nav.menu-desktop ul li {
+    list-style-type: none;
+    margin: 0 10px;
+}
+
+header nav.menu-desktop ul li a:hover {
+    color: #ff7700;
+    transition: linear .2s;
+}
+
+header nav.menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    transition: linear .2s;
+    overflow-x: hidden;
+    height: 1000vh;
+    background-color: #000;
+    -webkit-box-shadow: 6px 0px 11px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 0px 11px -1px rgba(0,0,0,0.75);
+    box-shadow: 6px 0px 11px -1px rgba(0,0,0,0.75);
+}
+
+header nav.menu-mobile h1 {
+    color: #FFF;
+    text-align: center;
+    margin: 15px 0 30px 0;
+}
+
+header nav.menu-mobile ul li {
+    list-style-type: none;
+    border: 2px solid #ff7700;
+    margin: 10px;
+    transition: ease .2s;
+}
+
+header nav.menu-mobile ul li:last-child {
+    border: none;
+    margin-top: 40px;
+    text-align: center;
+}
+
+header nav.menu-mobile ul li:hover {
+    background-color: #ff7700;
+    transition: ease .2s;
+}
+
+header nav.menu-mobile ul li:last-child:hover {
+    background: none;
+}
+
+header nav.menu-mobile a {
+    color: #FFF;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: inline-block;
+}
+
+header a.btn-talk {
+    border: 3px solid #FFF;
+    padding: 8px 28px;
+    border-radius: 20px;
+    transition: ease-in-out .3s;
+}
+
+header a.btn-talk:hover {
+    background-color: #FFF;
+    color: #000;
+    transition: ease-in-out .3s;
+}
+
+header span {
+    color: #FFF;
+    font-size: 35px;
+    display: none;
+}
+
+header span#closeIcon {
+    font-size: 40px;
+}
+
+/* banner style */
+
+section.banner {
+    padding: 190px 0 130px 0;
+}
+
+section.banner div.container-center {
+    gap: 60px;
+}
+
+div.left-side-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+div.left-side-banner div.txt-banner h1.name {
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+div.left-side-banner div.typing-effect-box {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+div.left-side-banner div.typing-effect-box h1 {
+    font-size: 35px;
+    background-color: #ff7700;
+    border-radius: 5px;
+}
+
+div.left-side-banner div.typing-effect-box span {
+    display: inline-block;
+    animation: cursor .4s linear infinite alternate;
+    width: 2px;
+    height: 42px;
+    background-color: #000;
+    margin-left: 3px;
+}
+
+div.left-side-banner ul {
+    width: 59%;
+    display: flex;
+    gap: 30px;
+    list-style-position: inside;
+    padding: 10px;
+    font-size: 16px;
+}
+
+div.left-side-banner ul li::marker {
+    color: #ff7700;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+div.left-side-banner div.btns-banner {
+    display: flex;
+    gap: 30px;
+}
+
+div.btns-banner a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 40px;
+    border-radius: 20px;
+    transition: ease-in-out .3s;
+}
+
+div.right-side-banner img {
+    height: 400px;
+}
+
+/* about section styles */
+
+section.about {
+    background-color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 10px;
+    border-top: 2.5px solid #9A9A9A;
+    border-bottom: 2.5px solid #9A9A9A;
+}
+
+section.about div.container-center {
+    justify-content: center;
+    flex-direction: column;
+}
+
+section.about div.center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+}
+
+section.about div.center-center div.left-side-about {
+    width: 50%;
+    z-index: 2;
+}
+
+section.about div.center-center div.left-side-about img {
+    width: 90%;
+}
+
+section.about div.center-center div.right-side-about {
+    padding: 20px 0;
+    width: 40%;
+}
+
+section.about div.center-center div.right-side-about h1:hover + div.marker-title {
+    width: 150px;
+    transition: linear .3s;
+}
+
+section.about div.center-center div.right-side-about div.marker-title {
+    width: 80px;
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+
+section.about div.center-center div.right-side-about p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+div.box-square {
+    width: 70%;
+    padding: 15px;
+    background-color: #ff7700;
+    -webkit-box-shadow: 14px 13px 0px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 13px 0px -1px rgba(0,0,0,0.75);
+    box-shadow: 14px 13px 0px -1px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-radius: 10px; */
+    border: 2px solid #000;
+}
+
+div.box-square div {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 170px;
+    font-size: 14px;
+    background-color: #fff;
+    padding: 10px;
+    text-align: justify;
+    border: 2px solid #000;
+    -webkit-box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
+    transition: ease-in-out .3s;
+}
+
+div.box-square div:hover {
+    cursor: default;
+    transition: ease-in-out .3s;
+    box-shadow: none;
+}
+
+/* projects section style */
+
+section.projects {
+    padding: 150px 10px;
+}
+
+section.projects div.container-center {
+    display: flex;
+    flex-direction: column;
+}
+
+section.projects .marker-title {
+    width: 80px;
+}
+
+section.projects h1:hover + div.marker-title {
+    width: 140px;
+}
+
+section.projects div.flex-project {
+    display: flex;
+    width: 100%;
+    height:300px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+section.projects div.flex-project div.box-projects {
+    background-color: red;
+    height: 100%;
+    width: 32%;
+    text-align: center;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 4px solid #ff7700;
+    -webkit-box-shadow: 13px 12px 0px -1px #0000004d;
+    -moz-box-shadow: 13px 12px 0px -1px #000000d4;
+    box-shadow: 13px 12px 0px -1px #000000d4;
+    transition: linear .2s;
+}
+
+section.projects div.flex-project div.box-projects:hover {
+    box-shadow: none;
+    transition: linear .2s;
+}
+
+section.projects div.flex-project div.box-projects:first-child {
+    background-image: url('images/pizzaria-project.png');
+}
+
+section.projects div.flex-project div.box-projects:nth-of-type(2) {
+    background-image: url('images/journal-project.png');
+}
+
+section.projects div.flex-project div.box-projects:last-child {
+    background-image: url('images/elorepx-project.png');
+}
+
+section.projects div.flex-project div.box-projects div.overlay {
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    z-index: 2;
+    background-color: #000000d1;
+    height: 100%;
+    width: 100%;
+    transition: ease .3s;
+}
+
+
+section.projects div.flex-project div.box-projects div.overlay:hover {
+    opacity: 1;
+    transform: ease .2s;
+}
+
+section.projects div.flex-project div.box-projects div.overlay span {
+    font-size: 13px;
+}
+
+section.projects a.see-more {
+    font-size: 18px;
+    color: #000;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: ease .2s;
+}
+
+section.projects a.see-more:hover {
+    color: #ff7700;
+    transition: ease .2s;
+}
+
+/* footer styles */
+
+footer {
+    /* background-color: #0000004d; */
+    background-color: #e0e0e0;
+    border-top: 2.5px solid #9A9A9A;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .container-center {  
+    justify-content: center;
+}
+
+footer .marker-title {
+    width: 100px;
+    margin: 2px auto 35px auto;
+}
+
+footer h1:hover + div.marker-title {
+    width: 195px;
+}
+
+footer .side-footer {
+    display: flex;
+    gap: 80px;
+}
+
+footer .side-footer .link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer .side-footer a {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid #000;
+    padding: 5px;
+    min-width: 300px;
+    transition: linear .3s;
+}
+
+footer .side-footer a img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+footer .side-footer a:hover {
+    background-color: #ff7700;
+    transition: linear .3s;
+}
+
+footer div.other-links {
+    margin-top: 40px;
+    color: #666666;
+}
+
+footer div.other-links a {
+    display: inline-block;
+    color: #464646;
+}
+
+footer div.other-links span {
+    margin: 0 10px;
+}
+
+
+/* responsivity */
+
+@media (max-width: 1057px) {
+
+    /* banner section */
+
+    div.left-side-banner div.txt-banner h1.name {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    
+    div.left-side-banner div.typing-effect-box h1 {
+        font-size: 30px;
+    }
+
+    div.right-side-banner img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 966px) {
+
+    /* about section */
+    section.about div.center-center div.right-side-about h1 {
+        font-size: 1.3em;
+    }
+
+    section.about div.center-center div.right-side-about p {
+        font-size: 14px;
+    }
+
+    div.box-square div {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 925px) {
+
+    /* banner section */
+    div.left-side-banner div.txt-banner h1.name {
+        font-size: 28px;
+    }
+
+    div.left-side-banner div.typing-effect-box h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 905px) {
+
+    section.banner {
+        padding: 160px 0 100px 0;
+    }
+
+    section.banner div.container-center {
+        flex-direction: column-reverse;
+        gap: 60px;
+        align-items: center;
+    }
+
+    div.left-side-banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    div.left-side-banner div.txt-banner h1.name {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    div.left-side-banner div.typing-effect-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    div.left-side-banner div.typing-effect-box span {
+        height: 38px;
+    }
+    
+    div.left-side-banner ul {
+        justify-content: center;
+        list-style-position: inside;
+        font-size: 16px;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 750px) {
+
+    header nav.menu-desktop {
+        display: none;
+    }
+
+    header a.btn-talk {
+        display: none;
+    }
+
+    header span {
+        display: inline-block;
+    }
+
+    header span#closeIcon {
+        display: none;
+    }
+
+    div.right-side-banner img {
+        height: 280px;
+    }
+
+    /* about section styles */
+
+    section.about div.center-center {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    section.about div.center-center div.left-side-about {
+        display: none;
+    }
+
+    section.about div.center-center div.right-side-about {
+        width: 55%;
+        text-align: center;
+    }
+
+    section.about div.center-center div.right-side-about h1:hover + div.marker-title {
+        width: 200px;
+        transition: linear .3s;
+    }
+
+    section.about div.center-center div.right-side-about div.marker-title {
+        width: 150px;
+        margin: 3px auto 25px auto;
+    }
+
+    section.about div.center-center div.right-side-about p {
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    div.box-square {
+        width: 70%;
+        padding: 30px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    div.box-square div {
+        width: 75%;
+        height: 150px;
+        font-size: 14px;
+    }
+
+    /* projects section */
+
+    section.projects {
+        padding: 100px 10px;
+    }
+    
+    section.projects div.flex-project {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        width: 100%;
+        height: 650px;
+    }
+    
+    section.projects div.flex-project div.box-projects {
+        height: 100%;
+        width: 55%;
+    }
+
+    /* footer */
+
+    footer .side-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .side-footer .link-container {
+        gap: 30px;
+    }
+
+    footer div.other-links {
+        margin: 50px auto 0 auto;
+        color: #666666;
+        width: 70%;
+    }
+
+    footer div.other-links a {
+        display: inline-block;
+        color: #464646;
+    }
+
+    footer div.other-links span {
+        margin: 0 10px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    div.left-side-banner div.txt-banner h1.name {
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    div.left-side-banner div.typing-effect-box h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    div.left-side-banner div.typing-effect-box span {
+        height: 25px;
+    }
+    
+    div.left-side-banner ul {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    div.right-side-banner img {
+        height: 200px;
+    }
+
+    div.btns-banner {
+        flex-direction: column-reverse;
+    }
+
+    div.btns-banner a {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* about section */
+
+    section.about div.container-center {
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    section.about div.center-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    section.about div.center-center div.right-side-about {
+        padding: 20px 0;
+        width: 90%;
+    }
+    
+    div.box-square {
+        width: 90%;
+    }
+    
+    div.box-square div {
+        width: 100%;
+    }
+
+    /* projects section */
+    
+    section.projects div.flex-project div.box-projects {
+        width: 90%;
+    }
+}
+
+@media (max-width: 430px) {
+    div.left-side-banner div.txt-banner h1.name {
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    div.left-side-banner div.typing-effect-box h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    div.left-side-banner div.typing-effect-box span {
+        height: 25px;
+    }
+    
+    div.left-side-banner ul {
+        width: 100%;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    div.right-side-banner img {
+        height: 200px;
+    }
+
+    div.btns-banner {
+        flex-direction: column-reverse;
+    }
+
+    div.btns-banner a {
+        text-align: center;
+        font-size: 14px;
+    }
+}

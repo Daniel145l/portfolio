@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sou Daniel Ulisses, um front-end developer! Quer conhecer mais sobre mim? Acesse meu Portfolio e entre em contato.">
+    <meta name="keywords" content="Daniel, Ulisses, Portfolio, Front-end, Projetos">
+    <meta name="author" content="Daniel Ulisses">
+    <link rel="stylesheet" href="styled.css">
+    <script src="script.js"></script>
+    <title>Portfolio | Daniel Lucas</title>
+</head>
+<body>
+    <div class="overlay" id="overlay" onclick="closeM()"></div>
+    <header>
+        <div class="container-center">
+            <div class="logo">
+                <h1>DL</h1>
+            </div><!--logo-->
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#social">Redes Sociais</a></li>
+                </ul>
+            </nav><!--menu-desktop-->
+
+            <nav class="menu-mobile" id="menu-mobile">
+                <h1>MENU</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#social">Redes Sociais</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=5588997242133" class="btn-talk" target="_blank" title="Conversar pelo WhatsApp">Conversar</a></li>
+                </ul>
+            </nav><!--menu-mobile-->
+
+            <a href="https://api.whatsapp.com/send?phone=5588997242133" class="btn-talk" target="_blank" title="Conversar pelo WhatsApp">Conversar</a>
+            <span id="openIcon" onclick="openM()">&#9776;</span>
+            <span id="closeIcon" onclick="closeM()">&times;</span>
+        </div><!-- container-center -->
+    </header>
+
+    <section class="banner" id="home">
+        <div class="container-center">
+            <div class="left-side-banner">
+                <div class="txt-banner">
+                    <h1 class="name">Oi, eu sou Daniel, um front-end developer!</h1>
+                    <div class="typing-effect-box">
+                        <h1 id="txt-place"></h1>
+                        <span class="cursor"></span>
+                    </div><!--typing-effect-box-->
+                </div><!--txt-banner-->
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                    <!-- <li>E +</li> -->
+                </ul>
+                <div class="btns-banner">
+                    <a href="#about" class="btn-orange" rel="noopener noreferrer">Sobre mim</a>
+                    <a href="https://api.whatsapp.com/send?phone=5588997242133" target="_blank" class="btn-black" rel="noopener noreferrer">Vamos Conversar!</a>
+                </div><!--btns-banner-->
+            </div><!--left-side-banner-->
+            <div class="right-side-banner">
+                <img src="images/imgBanner.png " alt="Daniel Lucas">
+            </div><!--right-side-banner-->
+        </div><!--container-center-->
+    </section><!--banner-->
+
+    <section class="about" id="about">
+        <div class="container-center">  
+            <div class="center-center">
+                <div class="left-side-about">
+                    <img src="images/about.png" alt="">
+                    <!-- <img src="images/img-about.png" alt=""> -->
+                </div><!--left-side-about-->
+                <div class="right-side-about">
+                    <!-- title -->
+                    <h1 class="title-section">UM POUCO SOBRE MIM</h1>
+                    <div class="marker-title"></div>
+                    <!-- description -->
+                    <p>Eu sou Daniel Ulisses, graduando em Engenharia de Software pela Universidade Federal do Ceará. Entrei na área de desenvolvimento estudando HTML, CSS e JS e em seguida me aprofundei ainda mais na área de Front-end e da própria programação como a lógica. Poder estar sempre aprendendo e melhorarando as habilidades, além de compartilhar conhecimentos e adquirir novas experiências para estar sempre pronto para ir para o próximo nível é algo que me motiva.</p>
+                </div><!--right-side-about-->
+            </div><!--center-center-->
+            <div class="box-square">
+                <!-- <h2>+ infos</h2> -->
+                <div>
+                    <p>Tenho conhecimento em HTML, CSS, JS, React JS e buscando aprender sobre outras tecnologias como Angular, Vue JS. Também possuo habilidades com plataformas de prototipação como Figma e Canva.</p>
+                </div>
+    
+                <div>
+                    <p>Possuo domínio intermediário da língua inglesa, buscando sempre melhorar, pois entendo que é uma ferramenta fundamental para progredir em busca de cumprir os objetivos e metas.</p>
+                </div>
+    
+                <div>
+                    <p>Quando não estou fazendo algo relacionado com a área de tecnologia, eu gosto de assistir filmes e séries, ouvir músicas, praticar ou assistir algum esporte e navegar pela internet buscando algum tema aleatório.</p>
+                </div>
+            </div>
+        </div><!--container-center-->
+    </section><!--about-->
+
+    <section class="projects" id="projects">
+        <div class="container-center">
+            <h1 class="title-section">PROJETOS</h1>
+            <div class="marker-title"></div>
+            <div class="flex-project">
+                <div class="box-projects" title="Ir para a página do projeto">
+                    <a href="https://landing-page-pizzaria-ten.vercel.app/" target="_blank">
+                        <!-- <img src="images/pizzaria-project.png" alt="Pizzaria"> -->
+                        <div class="overlay">
+                            <p>Landing Page de uma pizzaria</br><span>(Clique para ir para a página)</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="box-projects" title="Ir para a página do projeto">
+                    <a href="https://landing-page-indol-seven.vercel.app/" target="_blank" rel="noopener noreferrer">
+                        <!-- <img src="images/journal-project.png" alt="Diario de viagem"> -->
+                        <div class="overlay">
+                            <p>Landing Page de um diário de viagem</br><span>(Clique para ir para a página)</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="box-projects" title="Ir para a página do projeto">
+                    <a href="https://elorepx.vercel.app/" target="_blank" rel="noopener noreferrer">
+                        <!-- <img src="images/elorepx-project.png" alt="Blog sobre astronomia"> -->
+                        <div class="overlay">
+                            <p>Projeto de um blog sobre astronomia</br><span>(Clique para ir para a página)</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div><!--flex-projecto-->
+            <!-- <a href="https://vercel.com/daniel145ls-projects" target="_blank">Ver mais</a> -->
+            <a href="https://github.com/Daniel145l?tab=repositories" target="_blank" rel="noopener noreferrer" class="see-more">Ver mais</a>
+        </div><!--container-center-->
+    </section><!--projetos-->
+
+    <footer id="social">
+            <h1 class="title-section">REDES SOCIAIS</h1>
+            <div class="marker-title"></div>
+        <div class="container-center">
+            <nav class="side-footer">
+                <div class="link-container">
+                    <!-- <a href="https://www.instagram.com/o_danieu/" target="_blank" title="Instagram"><img src="images/Instagram-black.png" alt="Instagram"/>o_daniel</a> -->
+                    <a href="https://www.linkedin.com/in/daniellucasum/" target="_blank" title="LinkedIn"><img src="images/LinkedIn-black.png" alt="LinkedIn" title="LinkedIn">daniellucasum</a>
+                    <a href="mailto:daniellucasm18@gmai.com" target="_blank" title="Email"><img src="images/email-black.png" alt="Email">daniellucasm18@gmail.com</a>
+                </div>
+                <div class="link-container">
+                    <a href="https://github.com/Daniel145l" target="_blank" title="GitHub"><img src="images/GitHub-black.png" alt="GitHub" title="GitHub">Daniel145l</a>
+                    <a href="https://api.whatsapp.com/send?phone=5588997242133" target="_blank" title="WhatsApp"><img src="images/WhatsApp-black.png" alt="WhatsApp" title="WhatsApp">Daniel</a>
+                </div>
+            </nav>
+        </div>
+        <div class="other-links">
+            <a target="_blank" href="https://icons8.com/icon/62855/whatsapp">App</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> <span>|</span>
+            <a target="_blank" href="https://icons8.com/illustrations/illustration/64b6c913a5745c0001f7f28c">App</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> <span>|</span>
+            <a target="_blank" href="https://icons8.com/illustrations/illustration/6375c82c8daee300012edad2">App</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        </div>
+    </footer>
+</body>
+</html>
